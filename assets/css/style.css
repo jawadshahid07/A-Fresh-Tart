@@ -100,7 +100,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--gold-crayola);
-  z-index: 10;
+  z-index: 10000;
   display: grid;
   place-content: center;
   justify-items: center;
@@ -283,6 +283,8 @@ html {
 
 
 
+
+
 /* media queries*/
 @media (max-width: 991px) {
   html {
@@ -298,14 +300,16 @@ html {
     display: inline-block;
   }
   .header .navbar {
+    display: none;
     position: absolute;
     top: 99%;
     left: 0;
     right: 0;
     background: var(--eerie-black-1);
-    border-top: 0.1rem solid  rgba(0, 0, 0, 0.1);
-    border-bottom: 0.1rem solid rgba(0,0,0,0.1);
-    clip-path: polygon (0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    display: block;
   }
 
   .header .navbar a {
