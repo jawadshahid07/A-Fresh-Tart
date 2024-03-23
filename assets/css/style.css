@@ -225,6 +225,8 @@ body.nav-active {
 
 .contact-number::after { bottom: -5px; }
 
+.text-center { text-align: center; }
+
 /* Typography */
 .display-1,
 .headline-1,
@@ -494,3 +496,7 @@ body.nav-active {
 .navbar-text { margin-block: 10px; }
 
 .navbar .body-4 { color: var(--quick-silver); }
+
+.sidebar-link { transition: var(--transition-1); }
+
+.sidebar-link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
