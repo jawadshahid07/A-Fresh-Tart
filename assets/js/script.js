@@ -14,3 +14,12 @@ window.addEventListener("load", function () {
   preloader.classList.add("loaded");
   document.body.classList.add("loaded");
 });
+
+
+/* header */
+
+let navbar = document.querySelector('.navbar');
+
+document.querySelector('#menu-btn').onclick = () => {
+  navbar.classList.toggle('active');
+}
