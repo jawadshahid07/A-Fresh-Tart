@@ -219,3 +219,13 @@ html {
   color: #fff;
 }
 
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 1.7rem;
+  cursor: pointer;
+  color: var(--davys-grey);
+}
+
+.header .icons div:hover {
+  color: #fff;
+}
