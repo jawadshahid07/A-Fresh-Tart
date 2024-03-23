@@ -209,4 +209,13 @@ html {
   padding-right: .5 rem;
 }
 
-.header
+.header .navbar a {
+  font-size: 1.7rem;
+  color: var(--davys-grey);
+  margin: 0 1 rem;
+}
+
+.header .navbar a:hover {
+  color: #fff;
+}
+
