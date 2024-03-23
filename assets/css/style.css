@@ -88,6 +88,7 @@
   --transition-1: 250ms ease;
   --transition-2: 500ms ease;
   --transition-3: 1000ms ease;
+
 }
 
 /* Preloader */
@@ -169,4 +170,31 @@
 
 * {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: .2s linear;
 }
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--eerie-black-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, .1);
+}
+
