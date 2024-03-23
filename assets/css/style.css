@@ -229,3 +229,97 @@ html {
 .header .icons div:hover {
   color: #fff;
 }
+
+#menu-btn {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--eerie-black-1);
+    border-top: 0.1rem solid  rgba(0, 0, 0, 0.1);
+    border-bottom: 0.1rem solid rgba(0,0,0,0.1);
+    clip-path: polygon (0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: var(--eerie-black-1);
+    font-size: 2rem;
+    display:block;
+    border-radius: .5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50px;
+  }
+}
