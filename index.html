@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- 
         primary meta tags
     -->
     <title>A Fresh Tart</title>
-    <meta name ="title" content = "A Fresh Tart">
-    <meta name="description" content="This is a bakery website made for Web Engineering term project">
+    <meta name="title" content="A Fresh Tart" />
+    <meta
+      name="description"
+      content="This is a bakery website made for Web Engineering term project"
+    />
 
-    <!-- 
-        favicon
-    -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    
-    <!-- 
-        google fonts
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
     <!-- 
         custom css
     -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <!-- 
-        preload images
+        Preloader
     -->
-    <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
-    <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
-    <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
 
-</head>
-<body>
-    
+    <div class="preload" data-preload>
+      <div class="circle"></div>
+      <p class="text">A Fresh Tart</p>
+    </div>
+
+    <!-- header section start page -->
+    <header class ="header">
+        <a href="#" class = "logo"><i class = "fas fa-shopping-basket"></i> cake </a>
+
+        <nav class = "navbar">
+            <a href="#">home</a>
+            <a href="#">shop</a>
+            <a href="#">about</a>
+            <a href="#">review</a>
+            <a href="#">blog</a>
+            <a href="#">contact</a>
+        </nav>
+
+        <div class ="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            <div id="login-btn" class="fas fa-user"></div>
+        </div>
+        
+    </header>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
     <!-- 
-        custom js
+        custom javascript
     -->
     <script src="./assets/js/script.js"></script>
-
-    <!-- 
-        ionicons
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+  </body>
 </html>
