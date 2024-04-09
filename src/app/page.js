@@ -25,6 +25,17 @@ export default function Home() {
 
 
       </section>
+      <section className="text-center my-8" id="contact">
+        <SectionHeaders
+          subHeader={'Don\'t hesitate to'}
+          mainHeader={'Contact Us'}
+        />
+        <div className="mt-8">
+          <a className="text-4xl underline text-gray-500" href="tel:+923208433967">
+            +92 320 8433967
+          </a>
+        </div>
+      </section>
     </>
   )
 }
