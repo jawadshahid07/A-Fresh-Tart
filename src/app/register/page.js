@@ -46,10 +46,10 @@ export default function RegisterPage() {
         </div>
       )}
       <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
-        <input type="email" placeholder="email" value={email}
+        <input type="email" placeholder="Email" value={email}
                disabled={creatingUser}
                onChange={ev => setEmail(ev.target.value)} />
-        <input type="password" placeholder="password" value={password}
+        <input type="password" placeholder="Password" value={password}
                disabled={creatingUser}
                 onChange={ev => setPassword(ev.target.value)}/>
         <button type="submit" disabled={creatingUser}>
@@ -62,7 +62,7 @@ export default function RegisterPage() {
           onClick={() => signIn('google', {callbackUrl:'/'})}
           className="flex gap-4 justify-center">
           <Image src={'/google.png'} alt={''} width={24} height={24} />
-          Login with google
+          Login with Google
         </button>
         <div className="text-center my-4 text-gray-500 border-t pt-4">
           Existing account?{' '}
