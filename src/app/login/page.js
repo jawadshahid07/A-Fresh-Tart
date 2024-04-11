@@ -11,9 +11,7 @@ export default function LoginPage() {
   async function handleFormSubmit(ev) {
     ev.preventDefault();
     setLoginInProgress(true);
-
     await signIn('credentials', {email, password, callbackUrl: '/'});
-
     setLoginInProgress(false);
   }
   return (
@@ -28,7 +26,7 @@ export default function LoginPage() {
         <input type="password" name="password" placeholder="Password" value={password}
                disabled={loginInProgress}
                onChange={ev => setPassword(ev.target.value)}/>
-        <button disabled={loginInProgress} type="submit">Login</button>
+        <button type="submit" disabled={loginInProgress}>Login</button>
         <div className="my-4 text-center text-gray-500">
           or login with provider
         </div>
