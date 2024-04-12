@@ -9,6 +9,15 @@ export default function ProfilePage() {
     const [userName, setUserName] = useState(session?.data?.user?.name || '');
     const {status} = session;
 
+    async function handleProfileInfoUpdate(ev) {
+        ev.preventDefault();
+        const response = await fetch('/api/profile', {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({name:userName}),
+        });
+    }
+
     if (status === 'loading') {
         return 'Loading...';
     }
@@ -31,11 +40,11 @@ export default function ProfilePage() {
                             <button type="button">Edit</button>
                         </div>
                     </div>
-                    <div className="grow">
+                    <form className="grow" onSubmit={handleProfileInfoUpdate}>
                         <input type="text" placeholder="first and last name" value={userName} onChange={ev => setUserName(ev.target.value)}/>
                         <input type="email" disabled={true} value={session.data.user.email}/>
                         <button type="submit">Save</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
