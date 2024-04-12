@@ -6,8 +6,14 @@ import {useState} from "react";
 
 export default function ProfilePage() {
     const session = useSession();
-    const [userName, setUserName] = useState(session?.data?.user?.name || '');
+    const [userName, setUserName] = useState('');
     const {status} = session;
+
+    useEffect(() => {
+        if (status === 'authenticated') {
+            setUserName(session.data.user.name);
+        }
+    }, [session, status]);
 
     async function handleProfileInfoUpdate(ev) {
         ev.preventDefault();
