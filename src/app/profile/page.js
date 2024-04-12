@@ -74,7 +74,10 @@ export default function ProfilePage() {
                     <div>
                         <div className="p-2 rounded-lg relative">
                             <Image className="rounded-lg w-full h-full mb-1" src={userImage} width={250} height ={250} alt={'avatar'} />
-                            <button type="button">Edit</button>
+                            <label>
+                                <input type="file" className="hidden" onChange ={handleFileChange} />
+                                <span className="block border border-gray-300 rounded-lg p-2 text-center cursor-pointer">Edit</span>
+                            </label>
                         </div>
                     </div>
                     <form className="grow" onSubmit={handleProfileInfoUpdate}>
