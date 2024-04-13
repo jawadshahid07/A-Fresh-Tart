@@ -1,14 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['ClashDisplay-Regular', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
-        primary: '#776B5D', secondary: '#F3EEEA', tertiary: '#B0A695', extra: '#EBE3D5'
+        tomato: '#E50914',
+        marigold: '#ffbe0b',
       },
     },
   },
