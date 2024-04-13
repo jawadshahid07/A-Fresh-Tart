@@ -1,9 +1,6 @@
 import foody from "../assets/images/foody.png";
 import cartIcon from "../assets/icons/cart.svg";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import Button from "./elements/Button";
-import { useEffect, useState } from "react";
 
 export const Header = () => {
     return (
