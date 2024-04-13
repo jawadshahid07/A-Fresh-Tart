@@ -1,7 +1,7 @@
 const { faker } = require('@faker-js/faker');
 const MongoClient = require("mongodb").MongoClient;
 const _ = require("lodash");
-const dbConfig = require('./dbconfig');
+const dbConfig = require('./db.config');
 
 async function main() {
     const uri = dbConfig.url;
