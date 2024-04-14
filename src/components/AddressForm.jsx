@@ -44,7 +44,7 @@ export const AddressForm = ({ onTabSwitch }) => {
                     className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border roundedn shadow appearance-none focus:outline-none focus:shadow-outline"
                     id="province"
                     type="text"
-                    placeholder="province"
+                    placeholder="Province"
                     />
                 </div>
             </div>

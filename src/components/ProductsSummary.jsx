@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { cartProducts } from "../stores/cart/cartSlice";
-import { ProductsSummaryCard } from "./ProductSummaryCard";
+import { ProductsSummaryCard } from "./ProductsSummaryCard";
 
 export const ProductsSummary = () => {
     const cart = useSelector(cartProducts);
