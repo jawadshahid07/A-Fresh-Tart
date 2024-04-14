@@ -96,9 +96,10 @@ app.use('/api/', productRouter);
 
 app.post('/create-payment-intent', async(req, res) => {
     try {
-        const { orderItems, shippingAddress, userId } = req.body;
+        // const { orderItems, shippingAddress, userId } = req.body;
 
-        const totalPrice = calculateOrderAmount(orderItems);
+        // const totalPrice = calculateOrderAmount(orderItems);
+        totalPrice= 100;
 
         // await order.save();
 
