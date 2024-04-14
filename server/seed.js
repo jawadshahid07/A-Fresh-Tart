@@ -1,10 +1,9 @@
 const { faker } = require('@faker-js/faker');
 const MongoClient = require("mongodb").MongoClient;
 const _ = require("lodash");
-const dbConfig = require('./db.config');
 
 async function main() {
-    const uri = dbConfig.url;
+    const uri = "mongodb://localhost://27017";
     const client = new MongoClient(uri);
 
     try {

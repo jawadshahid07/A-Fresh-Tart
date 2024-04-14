@@ -1,3 +1,6 @@
+const dbName = 'a-fresh-tart';
+const dbHost = 'localhost';
+const dbPort = 27017;
 module.exports = {
-    url: 'mongodb+srv://a-fresh-tart:HWk3uOIIG6KOMmJ7@cluster0.14ewlgy.mongodb.net/?retryWrites=true&w=majority'
+    url: `mongodb://${dbHost}:${dbPort}/${dbName}`
 }
