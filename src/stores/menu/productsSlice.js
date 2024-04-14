@@ -9,7 +9,16 @@ const initialState = {
 export const productsSlice = createSlice({
     name: 'products',
     initialState,
-    reducers: {}
+    reducers: {},
+    extraReducers: (builder) => {
+        builder.addCase(fetchProducts.fulfilled, (state, action) => {
+            state.status = 'fulfilled'
+            state.products = [...action.payload.data]
+        });
+        builder.addCase(fetchProducts.pending, (state, action) => {
+            state.status = 'pending'
+        })
+    }
 })
 
 export const { getProducts } = productsSlice.actions
