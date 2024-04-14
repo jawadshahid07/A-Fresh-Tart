@@ -1,10 +1,11 @@
-const mongoose = require('mongoose');
-const dbConfig = require('../db.config');
+const mongoose = require('mongoose')
 
-mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch(e => console.error('Connection error', e.message));
+mongoose
+    .connect('mongodb://localhost:27017/a-fresh-tart', { useNewUrlParser: true })
+    .catch(e => {
+        console.error('Connection error', e.message)
+    })
 
-const db = mongoose.connection;
+const db = mongoose.connection
 
-module.exports = db;
+module.exports = db

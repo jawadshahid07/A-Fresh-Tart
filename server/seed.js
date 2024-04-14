@@ -1,10 +1,9 @@
 const { faker } = require('@faker-js/faker');
 const MongoClient = require("mongodb").MongoClient;
 const _ = require("lodash");
-const dbConfig = require('./db.config');
 
 async function main() {
-    const uri = dbConfig.url;
+    const uri = "mongodb://localhost://27017";
     const client = new MongoClient(uri);
 
     try {
@@ -17,10 +16,10 @@ async function main() {
         await categoriesCollection.insertMany(categories);
 
         let imageUrls = [
-            '../src/assets/images/pastry.png',
-            '../src/assets/images/cake.png',
-            '../src/assets/images/brownie.png',
-            '../src/assets/images/cupcake.png',
+            'https://res.cloudinary.com/dkkdith2d/image/upload/v1713079847/pl1hrmkuf53i3s7s8wdd.png',
+            'https://res.cloudinary.com/dkkdith2d/image/upload/v1713079847/wch4oo49ocyffyyuusem.png',
+            'https://res.cloudinary.com/dkkdith2d/image/upload/v1713079847/o1bso4irwaszqjk57hwq.png',
+            'https://res.cloudinary.com/dkkdith2d/image/upload/v1713079848/extdkwffw8iemywtanom.png',
         ]
 
         let index = [0,1,2,3];
