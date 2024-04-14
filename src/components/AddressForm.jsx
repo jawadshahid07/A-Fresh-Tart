@@ -38,13 +38,13 @@ export const AddressForm = ({ onTabSwitch }) => {
                     />
                 </div>
                 <div className="mb-4 md:mr-2 md:mb-0 flex-1">
-                    <label className="block mb-2 text-sm font-bold text-gray-700" for="state">State</label>
+                    <label className="block mb-2 text-sm font-bold text-gray-700" for="state">Province</label>
                     <input 
-                    {...register('state')}
+                    {...register('province')}
                     className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border roundedn shadow appearance-none focus:outline-none focus:shadow-outline"
-                    id="state"
+                    id="province"
                     type="text"
-                    placeholder="state"
+                    placeholder="province"
                     />
                 </div>
             </div>
