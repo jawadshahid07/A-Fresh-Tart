@@ -93,3 +93,28 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 app.use('/api/', productRouter);
+
+app.post('/create-payment-intent', async(req, res) => {
+    try {
+        const { orderItems, shippingAddress, userId } = req.body;
+
+        const totalPrice = calculateOrderAmount(orderItems);
+
+        // await order.save();
+
+        const paymentIntent = await stripe.paymentIntents.create({
+            amount: totalPrice,
+            currency: 'usd'
+        })
+
+        res.send({
+            clientSecret: paymentIntent.client_secret
+        })
+    } catch(e) {
+        res.status(400).json({
+            error: {
+                message: e.message
+            }
+        })
+    }
+})
