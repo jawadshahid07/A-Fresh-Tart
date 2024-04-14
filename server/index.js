@@ -15,6 +15,15 @@ var corsOptions = {
     origin: "http://localhost:3000"
 }
 
+const calculateOrderAmount = (orderItems) => {
+    const initialValue = 0;
+    const itemsPrice = orderItems.reduce(
+        (previousValue, currentValue) =>
+        previousValue + currentValue.price * currentValue.amount, initialValue
+    );
+    return itemsPrice * 100;
+}
+
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
