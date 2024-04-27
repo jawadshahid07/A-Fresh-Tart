@@ -3,9 +3,9 @@ import aboutImage from "../assets/images/about-image.png";
 export const About = () => {
 
     return (
-        <div className="bg-white" id="about">
+        <div className="bg-white">
             <div className="p-24 grid grid-cols-2">
-                <div className="">
+                <div className="flex flex-col justify-center">
                     <h2 className="text-2xl font-medium">About Us</h2>
                     <p className="text-lg">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
