@@ -33,6 +33,18 @@ export const Header = ({ cartCount }) => {
         }
     }, [])
 
+    const scrollToAbout = async () => {
+        if (window.location.pathname !== "/") {
+            navigate("/");
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <nav id="header" className="bg-black text-white">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -44,7 +56,7 @@ export const Header = ({ cartCount }) => {
                 <div className="nav-menu-wrapper flex items-center justify-between space-x-10">
                     <Link to="/" className="text-xl">Home</Link>
                     <Link to="/menu" className="text-xl">Menu</Link>
-                    <Link to="/about" className="text-xl">About</Link>
+                    <button className="text-xl" onClick={scrollToAbout}>About</button>
                 </div>
                 <div className="flex items-center justify-center space-x-4">
                     <Link to="/cart" className="mr-4 relative">
