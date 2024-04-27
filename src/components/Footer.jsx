@@ -6,10 +6,10 @@ export const Footer = () => {
                     <h2 class="mb-6 text-sm font-semibold text-gray-400 uppercase">Company</h2>
                     <ul class="text-gray-300">
                         <li class="mb-4">
-                            <a href="#" className=" hover:underline">About</a>
+                            <a href="/" className=" hover:underline">About</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" className="hover:underline">Menu</a>
+                            <a href="/menu" className="hover:underline">Menu</a>
                         </li>
                     </ul>
                 </div>
