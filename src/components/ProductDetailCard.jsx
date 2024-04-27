@@ -16,7 +16,7 @@ const ProductDetailCard = ({ product, onAddProduct }) => {
                 <img src={product.imageUrl} className="w-40 h-40 rounded-xl object-cover" alt={product.name} />
             </div>
             <div className="w-full flex items-center justify-center">
-                <Button onCick={onAddProduct}>Add to Cart</Button>
+                <Button onClick={onAddProduct}>Add to Cart</Button>
             </div>
         </div>
     )

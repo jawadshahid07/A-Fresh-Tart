@@ -16,7 +16,7 @@ const Menu = () => {
     }, [])
 
     const onAddProduct = (product) => {
-        dispatch(addToCart(product))
+        dispatch(addToCart({ ...product })) // Pass the product object to addToCart
     }
 
     const onTabSwitch = (newActiveTab) => {
@@ -49,7 +49,7 @@ const Menu = () => {
                 {
                     products.products && products.products[activeTabIndex].products.map((product, index) => {
                         return (
-                           <ProductDetailCard key={index} product={product} onAddProduct={onAddProduct}/>
+                           <ProductDetailCard key={index} product={product} onAddProduct={() => onAddProduct(product)}/> // Pass the product to onAddProduct
                         )
                     })
                 }
