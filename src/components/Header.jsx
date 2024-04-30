@@ -1,7 +1,6 @@
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Button from "./elements/Button";
 import { useEffect, useState } from "react";
 
 
@@ -38,6 +37,45 @@ export const Header = ({ cartCount }) => {
         setIsNavbarActive(!isNavbarActive);
     };
 
+    const navigateToBlogs = () => {
+        const blogsSection = document.getElementById("blogs");
+        if (blogsSection) {
+            blogsSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+            navigate("/");
+            setTimeout(() => {
+                const blogsSectionAfterLoad = document.getElementById("blogs");
+                if (blogsSectionAfterLoad) {
+                    blogsSectionAfterLoad.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 1000); 
+        }
+    };
+
+    const navigateToContact = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+            navigate("/");
+            setTimeout(() => {
+                const contactSectionAfterLoad = document.getElementById("contact");
+                if (contactSectionAfterLoad) {
+                    contactSectionAfterLoad.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 1000); 
+        }
+    };
+
+    const navigateToHome = () => {
+        const homeSection = document.getElementById("home");
+        if (homeSection) {
+            homeSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+            navigate("/");
+        }
+    };
+
     return (
         <header className="header">
             <div className="logoContent">
@@ -47,13 +85,13 @@ export const Header = ({ cartCount }) => {
                 <h1 className="logoName">A Fresh Tart </h1>
             </div>
             <nav className={`navbar ${isNavbarActive ? 'active' : ''}`}>
-                <Link to="/" >Home</Link>
+                <Link to="/" onClick={navigateToHome}>Home</Link>
                 <Link to="/menu" >Menu</Link>
-                <Link to="/" >Blogs</Link>
-                <Link to="/" >Contact</Link>
+                <Link to="/" onClick={navigateToBlogs} >Blogs</Link>
+                <Link to="/" onClick={navigateToContact}>Contact</Link>
                 {
                     isLoggedIn ? 
-                    <Button onClick={handleLogout}>Log Out</Button> : 
+                    <button onClick={handleLogout} class ="btn">Log Out</button> : 
                     (
                         <>
                             <Link to="/login">Log In</Link>

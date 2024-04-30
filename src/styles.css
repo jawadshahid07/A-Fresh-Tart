@@ -129,6 +129,15 @@ html::-webkit-scrollbar-thumb{
     line-height: 2;
     margin-bottom: 2rem;
 }
+
+.btn {
+    font-size: 1.8rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: .7rem;
+    padding: .7rem 2.4rem;
+    cursor: pointer;
+}
 .home .homeContent .home-btn{
     height: 3rem;
 }
@@ -438,8 +447,12 @@ section{
         padding: 1.3rem 3rem;
     }
     .home .homeContent{
-        margin-left: 0;
-        width: 80%;
+        padding-top: 10px;
+    }
+    .home {
+        padding-top: 0px;
+        margin-top: 50px;
+        align-items: flex-start
     }
 }
 

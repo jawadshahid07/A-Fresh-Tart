@@ -1,7 +1,7 @@
 export const AddProduct = ({ onAddProduct }) => {
     return (
         <div class="orderNow">
-            <button onClick={onAddProduct}>Order Now</button>
+            <button onClick={onAddProduct}>Add to Cart</button>
         </div>
     )
 }
