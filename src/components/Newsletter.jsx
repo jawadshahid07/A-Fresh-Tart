@@ -23,7 +23,6 @@ const Newsletter = () => {
             draggable: true,
             progress: undefined,
         });
-        // Optionally, you can clear the email input field after submission
         setEmail('');
     };
 

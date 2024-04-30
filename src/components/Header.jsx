@@ -34,18 +34,6 @@ export const Header = ({ cartCount }) => {
         }
     }, [])
 
-    const scrollToAbout = async () => {
-        if (window.location.pathname !== "/") {
-            navigate("/");
-            await new Promise(resolve => setTimeout(resolve, 100));
-        }
-
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-            aboutSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
     const toggleNavbar = () => {
         setIsNavbarActive(!isNavbarActive);
     };
@@ -62,7 +50,6 @@ export const Header = ({ cartCount }) => {
                 <Link to="/" >Home</Link>
                 <Link to="/menu" >Menu</Link>
                 <Link to="/" >Blogs</Link>
-                <Link to="/" >About</Link>
                 <Link to="/" >Contact</Link>
                 {
                     isLoggedIn ? 
