@@ -1,5 +1,3 @@
-import Button from "./elements/Button";
-
 export const Banner = () => {
     return (
         <section className="home" id="home">

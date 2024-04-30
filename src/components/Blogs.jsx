@@ -1,0 +1,56 @@
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const Blogs = () => {
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 1
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
+    return (
+        <section className="blogs" id="blogs">
+            <Carousel
+                responsive={responsive}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={5000}
+                arrows={true}
+                swipeable={true}
+                draggable={true}
+                showDots={true}
+                removeArrowOnDeviceType={["tablet", "mobile"]}
+            >
+                <div class = "blogs-row">
+                    <div className="box">
+                        <div className="img">
+                            <img src="images/blog-img1.png" alt="" />
+                        </div>
+                        <div className="content">
+                            <h3>Caramel Bourbon Vanilla Cupcakes</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam exercitationem ad tenetur veritatis odio quaerat nemo inventore eos maxime?</p>
+                            <a href="#blogs" className="btn">Learn More</a>
+                        </div>
+                    </div>
+                    {/* Add more divs for additional blog posts */}
+                </div>
+            </Carousel>
+        </section>
+    );
+};
+
+export default Blogs;

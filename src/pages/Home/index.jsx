@@ -1,6 +1,6 @@
-import { About } from "../../components/About";
 import { Banner } from "../../components/Banner";
-import { ContactUs } from "../../components/Contact";
+import Blogs from "../../components/Blogs";
+import Newsletter from "../../components/Newsletter";
 import { ProductsPreview } from "../../components/ProductsPreview";
 
 const Home = () => {
@@ -8,8 +8,8 @@ const Home = () => {
         <>
             <Banner />
             <ProductsPreview />
-            <About />
-            <ContactUs />
+            <Blogs />
+            <Newsletter />
         </>
     )
 }
