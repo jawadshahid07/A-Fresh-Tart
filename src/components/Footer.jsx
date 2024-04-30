@@ -1,6 +1,49 @@
 import logo from '../images/logo.png';
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+
+    const navigate = useNavigate();
+    
+    const navigateToBlogs = () => {
+        const blogsSection = document.getElementById("blogs");
+        if (blogsSection) {
+            blogsSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+            navigate("/");
+            setTimeout(() => {
+                const blogsSectionAfterLoad = document.getElementById("blogs");
+                if (blogsSectionAfterLoad) {
+                    blogsSectionAfterLoad.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 1000); 
+        }
+    };
+
+    const navigateToContact = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+            navigate("/");
+            setTimeout(() => {
+                const contactSectionAfterLoad = document.getElementById("contact");
+                if (contactSectionAfterLoad) {
+                    contactSectionAfterLoad.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 1000); 
+        }
+    };
+
+    const navigateToHome = () => {
+        const homeSection = document.getElementById("home");
+        if (homeSection) {
+            homeSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+            navigate("/");
+        }
+    };
 
     return (
         <footer class="footer" id="contact">
@@ -16,16 +59,14 @@ export const Footer = () => {
             </div>
             <div class="box">
                 <h3>Quick links</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Menu</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
+                <Link to="/" onClick={navigateToHome}><i class="fas fa-arrow-right"></i>Home</Link>
+                <Link to="/menu" ><i class="fas fa-arrow-right"></i>Menu</Link>
 
             </div>
             <div class="box">
                 <h3>Extra links</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Contact Us</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Login</a>
-                <a href="#"> <i class="fas fa-arrow-right"></i>Signup</a>
+                <Link to="/" onClick={navigateToBlogs} ><i class="fas fa-arrow-right"></i>Blogs</Link>
+                <Link to="/" onClick={navigateToContact}><i class="fas fa-arrow-right"></i>Contact</Link>
 
             </div>
             <div class="box">
