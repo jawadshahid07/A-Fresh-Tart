@@ -32,7 +32,7 @@ const Menu = () => {
     }
 
     return (
-        <div className="bg-white">
+        <div className="bg-white mt-20">
            {
             products.status !== 'fulfilled' ?
             <div>loading...</div> :

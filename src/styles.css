@@ -193,12 +193,12 @@ section{
     line-height: 1.6;
     color: var(--black);
 }
-.product .product-content .orderNow{
+.orderNow{
     height: 3rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
-.product .product-content .orderNow button{
+.orderNow button{
     font-size: 1.8rem;
     background-color: var(--black);
     color: var(--white);
