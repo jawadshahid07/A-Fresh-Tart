@@ -40,7 +40,9 @@ const Newsletter = () => {
                 />
                 <input type="submit" value="Subscribe" className="box2" />
             </form>
-            <ToastContainer />
+            <ToastContainer
+                         style={{ marginTop: '50px', fontSize: '18px' }}
+                    />
         </section>
     );
 };
