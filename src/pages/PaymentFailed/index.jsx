@@ -1,13 +1,13 @@
 import { Alert } from "../../components/elements/Alert";
 
-const PaymentSuccess = () => {
+const PaymentFailed = () => {
     return (
         <div className="max-w-lg mx-auto p-20 mt-20">
-            <Alert variant="success" className="text-xl p-4">
-                Your payment was successful
+            <Alert variant="danger" className="text-xl p-4">
+                Your payment has failed
             </Alert>
         </div>
     )
 }
 
-export default PaymentSuccess;
+export default PaymentFailed;

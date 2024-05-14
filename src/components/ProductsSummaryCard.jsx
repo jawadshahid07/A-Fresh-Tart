@@ -10,11 +10,11 @@ export const ProductsSummaryCard = ({ product }) => {
                 <img src={product.imageUrl} alt={product.name} />
             </div>
             <div className="product-info">
-                <h3>{product.name}</h3>
-                <p className="text-gray-600">{product.desciption}</p>
+                <h3 className="text-3xl">{product.name}</h3>
+                <p className="text-gray-600 text-xl">{product.desciption}</p>
             </div>
             <div className="product-price-qt flex flex-col items-center justify-center">
-                <div className="price">{`${product.price}$`}</div>
+                <div className="price text-xl">{`${product.price}$`}</div>
                 <div className="quantity flex">
                     <button className="p-1" disabled={product.amount <= 0} onClick={() => dispatch(decrementProductAmount(product))}>-</button>
                     <span className="p-1">{product.amount}</span>
@@ -24,3 +24,5 @@ export const ProductsSummaryCard = ({ product }) => {
         </div>
     )
 }
+
+

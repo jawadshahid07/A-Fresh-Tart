@@ -5,7 +5,6 @@ import { clearCart, cartProducts } from "../stores/cart/cartSlice";
 import { getAddress, clearAddress } from "../stores/userInfo/addressSlice";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import Button from "./elements/Button";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
@@ -16,6 +15,7 @@ export const StripeWrapper = () => {
         </Elements>
     )
 }
+
 const PaymentForm = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -57,6 +57,7 @@ const PaymentForm = () => {
             )
             if (backeEndError || stripeError) {
                 setError(backeEndError || stripeError);
+                navigate('/payment-failed');
             } else if (paymentIntent.status === 'succeeded') {
                 dispatch(clearAddress());
                 dispatch(clearCart());
@@ -77,13 +78,13 @@ const PaymentForm = () => {
                 <CardElement id="card-element" />
             </div>
             <div className="flex justify-center p-2">
-                <Button type="submit" disabled={loading}>
+                <button className="btn" type="submit" disabled={loading}>
                     {
                         loading ?
                         'Loading...' :
                         'Pay Now'
                     }
-                </Button>
+                </button>
             </div>
         </form>
     )

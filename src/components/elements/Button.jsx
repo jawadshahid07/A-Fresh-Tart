@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 function getClassName({ className}) {
     return clsx(
-        'text-white text-lg font-bold rounded-xl transition duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-50',
+        'text-black text-lg font-bold rounded-xl transition duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-50',
         className
     )
 }
@@ -13,17 +13,17 @@ const sizes = {
     large: 'w-full px-4 py-3',
   };
   
-const variants = {
-    primary: 'bg-marigold focus:ring-marigold',
-    secondary: 'bg-tomato focus:ring-tomato',
-    dark: 'bg-black focus:ring-white',
+  const variants = {
+    primary: 'bg-white text-black focus:ring-marigold',
+    secondary: 'bg-white text-black focus:ring-tomato',
+    dark: 'bg-white text-black focus:ring-cyan-400',
 };
 
 const Button = ({ 
     children,
     className,
     size = 'small',
-    variant = 'primary',
+    variant = 'dark',
     ...rest
  }) => {
     return (

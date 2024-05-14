@@ -7,11 +7,15 @@ export const ProductPreviewCard = ({ product, onAddProduct }) => {
     }
 
     return (
-        <div className="w-full p-4 m-2 rounded text-white bg-gradient-to-b from-slate-600 to-transparent text-center">
-            <img src={product.imageUrl} alt={product.name} />
-            <h2 className="pb-2 text-lg">{product.name}</h2>
-            <p className="mb-2 h-20 line-clamp-4">{product.desciption}</p>
-            <AddProduct onAddProduct={addProduct} />
+        <div class="box">
+            <div class="img">
+                <img src={product.imageUrl} alt={product.name} />
+            </div>
+            <div class="product-content">
+                <h3>{product.name}</h3>
+                <p>{product.desciption}</p>
+                <AddProduct onAddProduct={addProduct} />
+            </div>
         </div>
     )
 }

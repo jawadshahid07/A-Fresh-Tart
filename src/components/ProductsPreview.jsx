@@ -21,7 +21,7 @@ export const ProductsPreview = () => {
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2
+          items: 1
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
@@ -41,7 +41,10 @@ export const ProductsPreview = () => {
     }
 
     return (
-        <div className="container mx-auto pb-4 w-2/3 text-white bg-black">
+      <section class="product" id="product">
+        <div class="heading">
+            <h2>Our Exclusive Products</h2>
+        </div>
            <Carousel responsive={responsive}>
             {
                 products.length > 0 && products.map((product, index) => {
@@ -53,6 +56,6 @@ export const ProductsPreview = () => {
                 })
             }
             </Carousel>
-        </div>
+        </section>
     )
 }
