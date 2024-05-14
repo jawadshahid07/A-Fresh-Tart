@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# A Fresh Tart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the GitHub repository for **A Fresh Tart**, a bakery web application designed to bring the delightful world of baked goods directly to your doorstep. Our app allows users to explore a variety of bakery items, read engaging bakery-related blogs, view our menu, and place orders with ease.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **View Blogs**: Users can read blogs related to baking, recipes, and the latest trends in the bakery world.
+- **Menu Exploration**: Browse through our detailed menu to find descriptions and prices of the items.
+- **Categories**: Items are organized by category for easy navigation.
+- **User Authentication**: Secure login and registration functionality using Firebase Authentication.
+- **Order Placement**: Users can place orders directly through the app. The payment process is handled securely via Stripe API.
+- **Contact Us**: A dedicated page for users to reach out with their queries or feedback.
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is built using the MERN stack:
+- **MongoDB**: A document-based open source database.
+- **Express**: A web application framework for Node.js.
+- **React**: A JavaScript library for building user interfaces.
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Additional technologies:
+- **Firebase Authentication**: For handling user authentication.
+- **Stripe API**: To process payments securely.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get this project up and running on your local machine, follow these steps:
 
-### `npm run build`
+1. Clone the repository:
+    ```
+    git clone https://github.com/jawadshahid07/a-fresh-tart.git
+    ```
+2. Navigate to the project directory:
+    ```
+    cd a-fresh-tart
+    ```
+3. Install dependencies:
+    ```
+    npm install
+    ```
+4. Set up environment variables:
+    ```
+    Create a .env file in the root directory and add the following:
+    STRIPE_SECRET_KEY="<enter here>"
+    STRIPE_WEBHOOK_SECRET="<enter here>"
+    REACT_APP_STRIPE_PUBLISHABLE_KEY="<enter here>"
+    
+    REACT_APP_FIREBASE_CONFIG_API_KEY="<enter here>"
+    REACT_APP_FIREBASE_CONFIG_AUTH_DOMAIN="<enter here>"
+    REACT_APP_FIREBASE_CONFIG_PROJECT_ID="<enter here>"
+    REACT_APP_FIREBASE_CONFIG_STORAGE_BUCKET="<enter here>"
+    REACT_APP_FIREBASE_CONFIG_MESSAGING_SENDER_ID="<enter here>"
+    REACT_APP_FIREBASE_CONFIG_APP_ID="<enter here>"
+    REACT_APP_FIREBASE_CONFIG_MEASUREMENT_ID="<enter here>"
+    ```
+5. Install MongoDB server
+   ```
+   In server->db->index.js,
+   update connection string accordingly
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Run the frontend: 
+    ```
+    npm start
+    ```
+6. Run the server:
+   ```
+   cd server
+   node index.js
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After installation, the web app will be accessible on `http://localhost:3000`.
+**You can add products by either running the seed.js file available in server folder, or running the createCategory.js and createProduct.js files in server folder.**
 
-### `npm run eject`
+## Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Landing Page
+![Landing Page](screenshots/landing.png "Landing Page")
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Blog Section
+![Blog Section](screenshots/blogs.png "Blog Section")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Menu Page
+![Menu Page](screenshots/menu.png "Menu Page")
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Checkout Page
+![Checkout Page](screenshots/checkout.png "Checkout Page")
 
-## Learn More
+### Register Section
+![Register Section](screenshots/signup.png "Register Section")
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Interested in contributing to **A Fresh Tart**? We welcome contributions from all developers. To contribute, please:
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the MIT License. See `LICENSE` for more information.
